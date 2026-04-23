@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Development — Resume Tailor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Career Development: Resume Tailor</h1>
+        <p>
+          Paste your resume and a target job description. The tool highlights
+          role-specific gaps and drafts an updated resume version.
+        </p>
+      </header>
+
+      <section class="panels" aria-label="Resume and Job Description Slides">
+        <article class="panel">
+          <h2>Slide 1 — Resume</h2>
+          <textarea id="resumeInput" placeholder="Paste your resume here..."></textarea>
+        </article>
+
+        <article class="panel">
+          <h2>Slide 2 — Job Description</h2>
+          <textarea
+            id="jdInput"
+            placeholder="Paste the full job description here..."
+          ></textarea>
+        </article>
+      </section>
+
+      <section class="actions">
+        <button id="analyzeBtn">Analyze & Tailor Resume</button>
+      </section>
+
+      <section id="results" class="results hidden">
+        <div class="result-card">
+          <h3>Match Score</h3>
+          <p id="scoreText"></p>
+        </div>
+
+        <div class="result-card">
+          <h3>Top Missing Keywords</h3>
+          <ul id="missingList"></ul>
+        </div>
+
+        <div class="result-card full-width">
+          <h3>Tailored Resume Draft</h3>
+          <textarea id="tailoredOutput" readonly></textarea>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
